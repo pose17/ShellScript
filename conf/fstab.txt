@@ -1,0 +1,57 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Tue Aug  6 02:10:43 2024
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /                       xfs     defaults        0 0
+UUID=5b8cdff3-278b-451f-8c0d-859a757fbab0 /boot                   xfs     defaults        0 0
+/dev/mapper/cs-home     /home                   xfs     defaults        0 0
+/dev/mapper/cs-swap     none                    swap    defaults        0 0
+
+#
+# (1) Sfecific configuration
+#
+#UUID="fd69e67e-77b8-41c5-a07a-1f6e985de792" /testmount xfs defaults 0   2
+#/dev/sdb1    /testmount     ext4          defaults      0   2   
+#UUID="a018aa7b-d41c-48bb-b5d2-d97f9f0aee1f"    /testmount     ext4     defaults   0   2   
+
+#
+# (2) oracle configuration
+#
+#/dev/sdd1  /oracle     xfs     defaults    0   2
+#UUID="3d78aaa5-1cc1-4629-93ab-25cb72c5153f"    /oracle     xfs     defaults    0   2
+
+#
+# (3) LVM configuration
+#
+#/dev/mapper/vg1-lv1     /lv1    ext4    defaults    0   2   
+#/dev/vg1/lv2            /lv2    ext4    defaults    0   2
+
+#/dev/VG1/LV1    /lvm1   ext4    defaults    1   2  
+#/dev/VG1/LV2    /lvm2   ext4    defaults    1   2   
+#/dev/VG2/LV3    /lvm3   ext4    defaults    1   2   
+#/dev/VG2/LV4    /lvm4   ext4    defaults    1   2
+
+#
+# (4) RAID configuration
+#
+#/dev/md0    /raid0  xfs     defaults    0   2   
+#/dev/md0    /raid1  ext4    defaults    0   2   
+#/dev/md0     /raid5  xfs     defaults    0   2
+
+#
+# (5) Swap configuration
+#
+#/swap/swapfile none swap    defaults    0   0
+#/dev/sdb1   none    swap    defaults    0   0  
+#/dev/cs/swap2 none  swap    defaults    0   0  
+#
+#(6) SMB configuration
+#
+#//192.168.10.202/samba_share  /mnt/server  cifs credentials=/root/cred  0   0  
